@@ -1,0 +1,2865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theft Awareness Class | Court-Accepted Online Program</title>
+<meta name="description" content="Complete your court-ordered theft awareness class online. Self-paced, affordable, and accepted statewide. Receive your certificate of completion instantly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D1F3C;
+    --navy-deep: #080F1E;
+    --navy-mid: #162845;
+    --gold: #D4A017;
+    --gold-light: #F0C058;
+    --gold-pale: rgba(212,160,23,0.12);
+    --cream: #FAF8F2;
+    --text: #1a1a1a;
+    --text-muted: #5a5a5a;
+    --border: rgba(0,0,0,0.1);
+    --white: #ffffff;
+    --green: #1a7a4e;
+    --green-pale: #e8f5ee;
+    --red: #b02020;
+    --red-pale: #fde8e8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* ─── NAVIGATION ─── */
+  .site-header {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    text-decoration: none;
+  }
+
+  .nav-logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .nav-logo-sub {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 18px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.active { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+
+  .nav-cta {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+    border-radius: 4px !important;
+    margin-left: 8px;
+    border-bottom: none !important;
+    font-size: 13px !important;
+    transition: background 0.15s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  .nav-gold-bar {
+    height: 3px;
+    background: var(--gold);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+
+  /* ─── PAGES ─── */
+  .page { display: none; min-height: 80vh; }
+  .page.active { display: block; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 5rem 1.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 60px,
+      rgba(255,255,255,0.015) 60px,
+      rgba(255,255,255,0.015) 61px
+    );
+  }
+
+  .hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212,160,23,0.15);
+    border: 1px solid rgba(212,160,23,0.4);
+    color: var(--gold-light);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold-light);
+  }
+
+  .hero-lead {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.15s, transform 0.1s;
+    font-family: 'Source Sans 3', sans-serif;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 13px 28px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.15s;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
+  .hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .trust-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+
+  .trust-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  /* ─── SECTION COMMONS ─── */
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: var(--navy);
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 580px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ─── COURSE CARDS ─── */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .course-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .course-card:hover {
+    box-shadow: 0 8px 30px rgba(13,31,60,0.1);
+    transform: translateY(-2px);
+  }
+
+  .course-card.featured {
+    border-color: var(--navy);
+    border-width: 2px;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .card-hours {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .card-hours small {
+    font-size: 1rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  .card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .card-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+    line-height: 1;
+  }
+
+  .card-price-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .card-features {
+    list-style: none;
+    margin-bottom: 1.75rem;
+  }
+
+  .card-features li {
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .card-features li:last-child { border-bottom: none; }
+
+  .card-features li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── HOW IT WORKS ─── */
+  .steps-bg { background: var(--navy); color: #fff; }
+  .steps-bg .section-title { color: #fff; }
+  .steps-bg .section-desc { color: rgba(255,255,255,0.6); }
+  .steps-bg .section-label { color: var(--gold-light); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .step-item { position: relative; }
+
+  .step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gold-pale);
+    border: 1.5px solid rgba(212,160,23,0.4);
+    color: var(--gold-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-desc {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  /* ─── CURRICULUM ─── */
+  .curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .module-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-left: 3px solid var(--navy);
+    transition: border-left-color 0.15s;
+  }
+
+  .module-card:hover { border-left-color: var(--gold); }
+
+  .module-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  .module-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .module-desc {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* ─── CERTIFICATE SECTION ─── */
+  .cert-section {
+    background: var(--navy);
+    padding: 3rem 1.5rem;
+    color: #fff;
+  }
+
+  .cert-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .cert-preview {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cert-preview::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--navy), var(--gold));
+  }
+
+  .cert-preview-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+
+  .cert-preview-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .cert-preview-sub {
+    font-size: 10px;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .cert-name-line {
+    border-bottom: 1px solid var(--text);
+    margin: 0 1rem 4px;
+    height: 20px;
+  }
+
+  .cert-name-label {
+    font-size: 9px;
+    text-align: center;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .cert-seals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+
+  .cert-seal {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cert-seal svg { width: 22px; height: 22px; }
+
+  .cert-sig {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .cert-sig-label {
+    font-size: 8px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 4px;
+    margin-top: 2px;
+  }
+
+  .cert-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .cert-text p {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .cert-features { list-style: none; margin-bottom: 1.5rem; }
+  .cert-features li {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.7);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cert-features li::before { content: '✓'; color: var(--gold-light); font-weight: 700; }
+
+  /* ─── FAQ ─── */
+  .faq-list { max-width: 700px; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    padding: 1.1rem 2rem 1.1rem 0;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .faq-q::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--gold);
+    font-weight: 300;
+    transition: transform 0.2s;
+  }
+
+  .faq-q.open::after { content: '−'; }
+
+  .faq-a {
+    display: none;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-bottom: 1.1rem;
+    max-width: 620px;
+  }
+
+  .faq-a.open { display: block; }
+
+  /* ─── ENROLL PAGE ─── */
+  .enroll-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .enroll-step {
+    display: none;
+  }
+  .enroll-step.active { display: block; }
+
+  .enroll-progress {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .progress-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .progress-step:last-child { flex: 0; }
+
+  .progress-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--white);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .progress-dot.active {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: #fff;
+  }
+
+  .progress-dot.done {
+    border-color: var(--green);
+    background: var(--green);
+    color: #fff;
+  }
+
+  .progress-line {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+    margin: 0 4px;
+    transition: background 0.2s;
+  }
+
+  .progress-line.done { background: var(--green); }
+
+  .progress-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    white-space: nowrap;
+  }
+
+  .progress-label.active { color: var(--navy); font-weight: 600; }
+
+  .enroll-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .enroll-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+
+  .form-label span {
+    color: var(--red);
+    font-weight: 400;
+    font-size: 11px;
+    margin-left: 3px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    appearance: none;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(13,31,60,0.08);
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .course-select-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .course-select-card {
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+    background: var(--white);
+  }
+
+  .course-select-card:hover { border-color: var(--navy); }
+
+  .course-select-card.selected {
+    border-color: var(--navy);
+    background: rgba(13,31,60,0.03);
+  }
+
+  .course-select-card .radio-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    transition: all 0.15s;
+  }
+
+  .course-select-card.selected .radio-dot {
+    border-color: var(--navy);
+    background: var(--navy);
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+
+  .course-select-hours {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .course-select-hours small {
+    font-size: 0.85rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  .course-select-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 2px 0 8px;
+  }
+
+  .course-select-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .order-summary {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .order-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    padding: 5px 0;
+  }
+
+  .order-row.total {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 8px;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .order-total-price { color: var(--gold-light); }
+
+  .notice-box {
+    background: rgba(212,160,23,0.08);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    font-size: 13.5px;
+    color: #6b5000;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .notice-box strong { display: block; font-weight: 700; margin-bottom: 2px; }
+
+  .payment-mock {
+    background: #f8f9ff;
+    border: 1.5px solid #c3cfe8;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .payment-mock p { margin-bottom: 0.3rem; }
+  .payment-mock strong { color: var(--navy); font-size: 14px; }
+
+  .stripe-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* ─── COURSE PLAYER ─── */
+  .player-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 60px);
+  }
+
+  .player-sidebar {
+    background: var(--navy-deep);
+    color: #fff;
+    padding: 1.5rem 0;
+    overflow-y: auto;
+  }
+
+  .sidebar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold-light);
+    padding: 0 1.25rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-module {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .sidebar-module-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    padding: 6px 1.25rem 4px;
+  }
+
+  .sidebar-lesson {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 1.25rem;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: all 0.1s;
+    border-left: 3px solid transparent;
+  }
+
+  .sidebar-lesson:hover { background: rgba(255,255,255,0.05); color: #fff; }
+  .sidebar-lesson.active { background: rgba(212,160,23,0.1); color: var(--gold-light); border-left-color: var(--gold); }
+  .sidebar-lesson.done { color: rgba(255,255,255,0.45); }
+
+  .lesson-check {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    transition: all 0.15s;
+  }
+
+  .sidebar-lesson.done .lesson-check {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+
+  .sidebar-lesson.active .lesson-check {
+    border-color: var(--gold);
+  }
+
+  .player-main {
+    background: var(--cream);
+    padding: 2.5rem;
+    overflow-y: auto;
+  }
+
+  .player-progress-bar {
+    background: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    height: 6px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .player-progress-fill {
+    height: 100%;
+    background: var(--navy);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+  }
+
+  .lesson-content-area {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 680px;
+  }
+
+  .lesson-module-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .lesson-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .lesson-body {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.8;
+  }
+
+  .lesson-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .lesson-body p { margin-bottom: 1rem; }
+
+  .lesson-body ul {
+    margin: 0.5rem 0 1rem 1.25rem;
+    color: var(--text);
+  }
+
+  .lesson-body li { margin-bottom: 0.4rem; }
+
+  .lesson-body blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 0.75rem 1rem;
+    background: var(--gold-pale);
+    border-radius: 0 6px 6px 0;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .stat-callout {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    white-space: nowrap;
+  }
+
+  .stat-text { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+  .quiz-area {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1.75rem;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+  }
+
+  .quiz-title {
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    font-size: 15px;
+  }
+
+  .quiz-question {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .quiz-options { list-style: none; margin-bottom: 1.25rem; }
+
+  .quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.1s;
+    background: var(--cream);
+  }
+
+  .quiz-option:hover { border-color: var(--navy); background: rgba(13,31,60,0.03); }
+  .quiz-option.correct { border-color: var(--green); background: var(--green-pale); color: var(--green); }
+  .quiz-option.wrong { border-color: var(--red); background: var(--red-pale); color: var(--red); }
+  .quiz-option.selected { border-color: var(--navy); background: rgba(13,31,60,0.05); }
+
+  .quiz-feedback {
+    font-size: 13.5px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .quiz-feedback.correct { background: var(--green-pale); color: var(--green); display: block; }
+  .quiz-feedback.wrong { background: var(--red-pale); color: var(--red); display: block; }
+
+  .lesson-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 680px;
+  }
+
+  .btn-lesson {
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Source Sans 3', sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-lesson:hover { background: var(--navy-mid); }
+  .btn-lesson.outline {
+    background: transparent;
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+  }
+  .btn-lesson.outline:hover { background: rgba(13,31,60,0.05); }
+  .btn-lesson.gold { background: var(--gold); color: var(--navy); font-weight: 700; }
+  .btn-lesson.gold:hover { background: var(--gold-light); }
+
+  /* ─── CERTIFICATE PAGE ─── */
+  .cert-page-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .cert-success-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--green-pale);
+    border: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+  }
+
+  .cert-print-area {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 3rem 3.5rem;
+    margin: 2rem auto;
+    max-width: 660px;
+    position: relative;
+    font-family: 'Source Sans 3', sans-serif;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+  }
+
+  .cert-border-inner {
+    border: 1px solid var(--gold);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .cert-corners::before, .cert-corners::after {
+    content: '✦';
+    position: absolute;
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .cert-top-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .cert-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  .cert-tagline {
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .cert-presented {
+    font-size: 13px;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .cert-recipient {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    border-bottom: 1.5px solid var(--text-muted);
+    padding-bottom: 6px;
+    margin-bottom: 1.25rem;
+  }
+
+  .cert-body-text {
+    font-size: 13px;
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .cert-course-name {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .cert-details-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  .cert-detail {
+    text-align: center;
+  }
+
+  .cert-detail-val {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--navy);
+  }
+
+  .cert-detail-key {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .cert-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  .cert-sig-block { text-align: center; }
+  .cert-sig-name { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: var(--navy); }
+  .cert-sig-title { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 4px; margin-top: 3px; }
+
+  .cert-seal-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2.5px solid var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 1.2;
+    flex-direction: column;
+  }
+
+  .cert-id {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    letter-spacing: 0.06em;
+  }
+
+  /* ─── ALERT / TOAST ─── */
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--navy);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 999;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    background: var(--navy-deep);
+    color: rgba(255,255,255,0.5);
+    padding: 2.5rem 1.5rem;
+    border-top: 3px solid var(--gold);
+  }
+
+  .footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-brand p {
+    font-size: 12.5px;
+    line-height: 1.65;
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-col a {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 3px 0;
+    transition: color 0.15s;
+    cursor: pointer;
+  }
+
+  .footer-col a:hover { color: #fff; }
+
+  .footer-bottom {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom p {
+    font-size: 11.5px;
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 0; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 14px 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); border-bottom-color: rgba(255,255,255,0.07) !important; }
+    .hamburger { display: flex; }
+    .site-header { position: relative; }
+    .nav-inner { flex-wrap: wrap; }
+    .cert-inner { grid-template-columns: 1fr; }
+    .player-layout { grid-template-columns: 1fr; }
+    .player-sidebar { display: none; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .course-select-grid { grid-template-columns: 1fr; }
+    .cert-print-area { padding: 1.5rem; }
+    .cert-border-inner { padding: 1rem; }
+    .cert-recipient { font-size: 1.6rem; }
+  }
+
+  @media (max-width: 520px) {
+    .courses-grid { grid-template-columns: 1fr; }
+    .hero-trust { gap: 1.5rem; }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo" onclick="showPage('home')">
+      <span class="nav-logo-main">Theft Awareness Class</span>
+      <span class="nav-logo-sub">Court-Accepted Online Program</span>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="main-nav" role="list">
+      <li><a href="#" onclick="showPage('home')" data-page="home" class="active">Home</a></li>
+      <li><a href="#" onclick="showPage('course')" data-page="course">The Course</a></li>
+      <li><a href="#" onclick="showPage('faq')" data-page="faq">FAQs</a></li>
+      <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact</a></li>
+      <li><a href="#" onclick="showPage('enroll')" class="nav-cta">Enroll Now</a></li>
+    </ul>
+  </nav>
+  <div class="nav-gold-bar"></div>
+</header>
+
+<!-- ═══════════════════════════════════ HOME PAGE ═══════════════════════════════════ -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">⚖ Court-Accepted &nbsp;·&nbsp; Statewide Program</div>
+      <h1>Complete Your<br><em>Theft Awareness Class</em><br>Online — Today</h1>
+      <p class="hero-lead">A state-recognized, self-paced course for individuals required to complete theft awareness education as a condition of probation or court order.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('enroll')">Enroll Now — Starting at $10</button>
+        <button class="btn-secondary" onclick="showPage('course')">View Curriculum</button>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-num">4 &amp; 8</div>
+          <div class="trust-label">Hour Options</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">$10</div>
+          <div class="trust-label">Starting Price</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">100%</div>
+          <div class="trust-label">Online &amp; Mobile</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">PDF</div>
+          <div class="trust-label">Instant Certificate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Options -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Enrollment Options</div>
+      <h2 class="section-title">Choose the course your court requires</h2>
+      <p class="section-desc">If you're unsure which length is required, check your court order or ask your probation officer before enrolling.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="card-hours">4 <small>hours</small></div>
+          <div class="card-name">Standard Program</div>
+          <div class="card-price">$10</div>
+          <div class="card-price-note">One-time payment · No hidden fees</div>
+          <ul class="card-features">
+            <li>4 self-paced online modules</li>
+            <li>Reading materials &amp; module quizzes</li>
+            <li>Final knowledge assessment</li>
+            <li>Instant PDF certificate of completion</li>
+            <li>Court documentation packet included</li>
+            <li>90-day access from enrollment</li>
+          </ul>
+          <button class="btn-primary" onclick="enrollWithCourse(4)" style="width:100%">Enroll in 4-Hour Course</button>
+        </div>
+        <div class="course-card featured">
+          <div class="featured-badge">Most Commonly Required</div>
+          <div class="card-hours">8 <small>hours</small></div>
+          <div class="card-name">Extended Program</div>
+          <div class="card-price">$20</div>
+          <div class="card-price-note">One-time payment · No hidden fees</div>
+          <ul class="card-features">
+            <li>8 self-paced online modules</li>
+            <li>In-depth reading &amp; case studies</li>
+            <li>Module quizzes after each lesson</li>
+            <li>Final knowledge assessment</li>
+            <li>Instant PDF certificate of completion</li>
+            <li>Court documentation packet included</li>
+            <li>90-day access from enrollment</li>
+          </ul>
+          <button class="btn-primary" onclick="enrollWithCourse(8)" style="width:100%">Enroll in 8-Hour Course</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section steps-bg">
+    <div class="section-inner">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple steps to completion</h2>
+      <p class="section-desc">Most students complete the 4-hour course in a single sitting. The 8-hour course can be completed over multiple sessions — your progress is always saved.</p>
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-title">Register &amp; pay online</div>
+          <p class="step-desc">Create your account and pay your one-time course fee securely. Receipt provided immediately.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-title">Complete the coursework</div>
+          <p class="step-desc">Work through each module at your own pace, any time of day, on any device. Progress saves automatically.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-title">Pass the assessment</div>
+          <p class="step-desc">A short knowledge check confirms you completed the material. Unlimited retakes at no extra charge.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-title">Download your certificate</div>
+          <p class="step-desc">Your official PDF certificate is generated instantly. Print or email it directly to your probation officer or the court.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Section -->
+  <section class="cert-section">
+    <div class="cert-inner">
+      <div class="cert-text">
+        <h3>Official Certificate of Completion</h3>
+        <p>Upon passing the final assessment, your certificate is generated instantly as a professional PDF — ready to print or submit electronically.</p>
+        <ul class="cert-features">
+          <li>Your full legal name</li>
+          <li>Course title and hours completed</li>
+          <li>Date of completion</li>
+          <li>Unique program verification ID</li>
+          <li>Program director signature</li>
+          <li>Official program seal</li>
+        </ul>
+        <button class="btn-primary" onclick="showPage('enroll')">Get Your Certificate — Starting at $10</button>
+      </div>
+      <div>
+        <div class="cert-preview">
+          <div class="cert-preview-header">Certificate of Completion</div>
+          <div class="cert-preview-title">Theft Awareness Class</div>
+          <div class="cert-preview-sub">A State-Recognized Education Program</div>
+          <div style="font-size:10px;text-align:center;color:#888;margin-bottom:8px;">This certifies that</div>
+          <div class="cert-name-line"></div>
+          <div class="cert-name-label">Participant Name</div>
+          <div style="font-size:10px;text-align:center;color:#888;line-height:1.5;">has successfully completed the required coursework<br>and demonstrated understanding of all program objectives</div>
+          <div class="cert-seals">
+            <div class="cert-seal">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="#0D1F3C" stroke-width="1.5"/>
+                <path d="M14 20l4 4 8-8" stroke="#0D1F3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="cert-sig">Program Director</div>
+              <div class="cert-sig-label">Authorized Signature</div>
+            </div>
+            <div style="text-align:right;font-size:9px;color:#888;">
+              <div>Date:</div>
+              <div style="border-bottom:1px solid #ccc;width:70px;height:14px;display:inline-block;margin-top:2px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════ COURSE PAGE ═══════════════════════════════════ -->
+<div id="page-course" class="page">
+  <section class="section" style="background:var(--navy);color:#fff;padding:3rem 1.5rem;">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--gold-light);">About the Program</div>
+      <h2 class="section-title" style="color:#fff;">A substantive, evidence-based curriculum</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.65);">Our course was developed by criminal justice educators and covers the real social, economic, and personal costs of retail theft — designed to meet court-ordered educational requirements.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">4-Hour Curriculum</div>
+      <h2 class="section-title">Standard Program Modules</h2>
+      <p class="section-desc">Four modules covering the foundational topics required for court-ordered theft awareness education.</p>
+      <div class="curriculum-grid" style="margin-bottom:3rem;">
+        <div class="module-card">
+          <div class="module-num">Module 1</div>
+          <div class="module-title">The True Cost of Retail Theft</div>
+          <p class="module-desc">How theft affects prices, jobs, small businesses, and entire communities — beyond just the retailer.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Module 2</div>
+          <div class="module-title">Legal Consequences &amp; the Justice System</div>
+          <p class="module-desc">Criminal records, sentencing guidelines, civil recovery, and the long-term impact on employment and housing.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Module 3</div>
+          <div class="module-title">Understanding the Decision to Steal</div>
+          <p class="module-desc">Psychological, social, and situational factors that contribute to theft — and how to recognize them.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Module 4</div>
+          <div class="module-title">Moving Forward: Positive Change</div>
+          <p class="module-desc">Practical strategies for making better decisions, building accountability, and accessing support resources.</p>
+        </div>
+      </div>
+
+      <div class="section-label">8-Hour Curriculum</div>
+      <h2 class="section-title">Extended Program — Additional Modules</h2>
+      <p class="section-desc">Includes all four modules above, plus four additional in-depth modules with case studies and deeper analysis.</p>
+      <div class="curriculum-grid">
+        <div class="module-card">
+          <div class="module-num">Module 5</div>
+          <div class="module-title">Retail Theft &amp; Organized Crime</div>
+          <p class="module-desc">How individual theft connects to larger criminal networks, and the public safety implications.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Module 6</div>
+          <div class="module-title">Victims of Theft: Human Impact</div>
+          <p class="module-desc">Case studies exploring how theft affects store employees, business owners, and surrounding neighborhoods.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Module 7</div>
+          <div class="module-title">Economic &amp; Societal Ripple Effects</div>
+          <p class="module-desc">Pricing, tax revenue, neighborhood investment, and how retail closures affect under-resourced communities.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Module 8</div>
+          <div class="module-title">Restorative Justice &amp; Accountability</div>
+          <p class="module-desc">An introduction to restorative justice principles and how accountability can be a path to genuine rehabilitation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff;border-top:1px solid var(--border);">
+    <div class="section-inner" style="text-align:center;">
+      <div class="section-label">Ready to Begin?</div>
+      <h2 class="section-title">Enroll today — complete at your own pace</h2>
+      <p class="section-desc" style="margin:0 auto 2rem;">4-hour course: $10 &nbsp;·&nbsp; 8-hour course: $20 &nbsp;·&nbsp; Certificate issued upon completion</p>
+      <button class="btn-primary" onclick="showPage('enroll')">Start Enrollment</button>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════ FAQ PAGE ═══════════════════════════════════ -->
+<div id="page-faq" class="page">
+  <section class="section" style="background:var(--navy);color:#fff;padding:3rem 1.5rem;">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--gold-light);">Help Center</div>
+      <h2 class="section-title" style="color:#fff;">Frequently Asked Questions</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.65);">Answers to the questions we hear most often. Can't find what you need? <a href="#" onclick="showPage('contact')" style="color:var(--gold-light);">Contact us.</a></p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is this course accepted by my court or probation officer?</button>
+          <div class="faq-a">Our program is designed to meet the educational requirements for court-ordered theft awareness programs. However, acceptance varies by jurisdiction. We strongly recommend confirming with your probation officer, attorney, or the court clerk that this specific program meets your requirements before enrolling. We can provide a program overview letter upon request.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long do I have to complete the course?</button>
+          <div class="faq-a">You have 90 days from the date of enrollment to complete your course. Your progress is saved automatically, so you can stop and continue any time. If you need an extension, contact our support team and we will work with you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I take the course on my phone or tablet?</button>
+          <div class="faq-a">Yes. The course is fully mobile-optimized and works on any smartphone, tablet, laptop, or desktop computer. You just need an internet connection and a browser. No app installation is required.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What if I fail the final assessment?</button>
+          <div class="faq-a">You can retake the final assessment as many times as needed at no additional charge. We want you to succeed. The assessment covers the material in the course, so reviewing any modules you feel uncertain about before retaking is recommended.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I get my certificate after completing the course?</button>
+          <div class="faq-a">Your certificate of completion is generated immediately and automatically as a PDF once you pass the final assessment. You can download it directly from your account dashboard, save it, and print or email it as needed. Certificates are also stored in your account indefinitely.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Which course length should I choose — 4 or 8 hours?</button>
+          <div class="faq-a">Your court order or probation officer will specify which length is required. Check your court documents carefully. If it says "theft awareness class" without specifying hours, contact your probation officer before enrolling. We cannot issue refunds based on selecting the wrong course length.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What does the course cost and what payment methods are accepted?</button>
+          <div class="faq-a">The 4-hour Standard Program is $10. The 8-hour Extended Program is $20. Both are one-time payments with no hidden fees or subscriptions. We accept all major credit and debit cards (Visa, Mastercard, American Express, Discover) as well as PayPal.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I get a refund?</button>
+          <div class="faq-a">Refunds are available within 7 days of purchase if you have not started any coursework. Once you begin a module, the course is considered in use and no refund will be issued. If you have a billing error, contact us and we will resolve it promptly.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is my personal information kept private?</button>
+          <div class="faq-a">Yes. We take privacy seriously. Your personal information and course records are used only to administer your enrollment and generate your certificate. We do not sell your data to third parties. We do not contact courts, probation offices, or law enforcement on your behalf unless you explicitly request it.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">I completed the course but my certificate shows the wrong name. What do I do?</button>
+          <div class="faq-a">Contact our support team immediately at support@theftawarenessclass.com with your order number and the correct name as it should appear. We will issue a corrected certificate within one business day at no charge. Please ensure your name is entered correctly during enrollment — exactly as it appears on your government-issued ID.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════ CONTACT PAGE ═══════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <section class="section" style="background:var(--navy);color:#fff;padding:3rem 1.5rem;">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--gold-light);">Support</div>
+      <h2 class="section-title" style="color:#fff;">Contact Us</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.65);">We typically respond within one business day. For urgent matters, email is the fastest way to reach us.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:800px;">
+        <div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.25rem;">Send a message</h3>
+          <div class="form-group">
+            <label class="form-label">Your name <span>required</span></label>
+            <input type="text" class="form-input" placeholder="Full name" id="contact-name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email address <span>required</span></label>
+            <input type="email" class="form-input" placeholder="you@email.com" id="contact-email">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <select class="form-input" id="contact-subject">
+              <option>General question</option>
+              <option>Certificate or completion issue</option>
+              <option>Billing or refund</option>
+              <option>Technical problem</option>
+              <option>Court acceptance question</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message <span>required</span></label>
+            <textarea class="form-input" rows="5" placeholder="Describe your question or issue..." id="contact-msg" style="resize:vertical;"></textarea>
+          </div>
+          <button class="btn-primary" onclick="submitContact()">Send Message</button>
+        </div>
+        <div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.25rem;">Contact information</h3>
+          <div style="margin-bottom:1.5rem;">
+            <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:3px;">Email</div>
+            <div style="font-size:14px;color:var(--text-muted);">support@theftawarenessclass.com</div>
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:3px;">Response time</div>
+            <div style="font-size:14px;color:var(--text-muted);">Within 1 business day (Mon–Fri)</div>
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:3px;">Technical support</div>
+            <div style="font-size:14px;color:var(--text-muted);">Available Mon–Fri, 9 AM – 5 PM ET</div>
+          </div>
+          <div class="notice-box" style="margin-top:1.5rem;">
+            <strong>Please note</strong>
+            We cannot provide legal advice or guarantee court acceptance of our program. Questions about your specific court order should be directed to your attorney or probation officer.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════ ENROLL PAGE ═══════════════════════════════════ -->
+<div id="page-enroll" class="page">
+  <div class="enroll-wrap">
+
+    <div class="enroll-progress" role="progressbar" aria-label="Enrollment steps">
+      <div class="progress-step">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div class="progress-dot active" id="dot-1">1</div>
+          <div class="progress-label active" id="label-1">Select</div>
+        </div>
+      </div>
+      <div class="progress-line" id="line-1"></div>
+      <div class="progress-step">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div class="progress-dot" id="dot-2">2</div>
+          <div class="progress-label" id="label-2">Register</div>
+        </div>
+      </div>
+      <div class="progress-line" id="line-2"></div>
+      <div class="progress-step">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div class="progress-dot" id="dot-3">3</div>
+          <div class="progress-label" id="label-3">Payment</div>
+        </div>
+      </div>
+      <div class="progress-line" id="line-3"></div>
+      <div class="progress-step" style="flex:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div class="progress-dot" id="dot-4">4</div>
+          <div class="progress-label" id="label-4">Start</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 1: Select Course -->
+    <div class="enroll-step active" id="enroll-step-1">
+      <h2 class="enroll-title">Select Your Course</h2>
+      <p class="enroll-desc">Choose the course length specified in your court order or probation terms. If unsure, contact your probation officer before selecting.</p>
+
+      <div class="notice-box">
+        <strong>Check your court order first</strong>
+        Select exactly the number of hours specified in your court document. We are unable to issue refunds if the wrong course is selected.
+      </div>
+
+      <div class="course-select-grid">
+        <div class="course-select-card" id="select-4" onclick="selectCourse(4)">
+          <div class="radio-dot"></div>
+          <div class="course-select-hours">4 <small>hrs</small></div>
+          <div class="course-select-label">Standard Program</div>
+          <div class="course-select-price">$10</div>
+        </div>
+        <div class="course-select-card" id="select-8" onclick="selectCourse(8)">
+          <div class="radio-dot"></div>
+          <div class="course-select-hours">8 <small>hrs</small></div>
+          <div class="course-select-label">Extended Program</div>
+          <div class="course-select-price">$20</div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="step1-next" onclick="goToStep(2)" disabled style="width:100%;opacity:0.5;cursor:not-allowed;">Continue to Registration</button>
+    </div>
+
+    <!-- Step 2: Register -->
+    <div class="enroll-step" id="enroll-step-2">
+      <h2 class="enroll-title">Create Your Account</h2>
+      <p class="enroll-desc">Enter your information exactly as it should appear on your certificate. Use your full legal name.</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">First name <span>required</span></label>
+          <input type="text" class="form-input" id="reg-first" placeholder="First name" autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last name <span>required</span></label>
+          <input type="text" class="form-input" id="reg-last" placeholder="Last name" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email address <span>required</span></label>
+        <input type="email" class="form-input" id="reg-email" placeholder="your@email.com" autocomplete="email">
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Your certificate and receipt will be sent here.</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirm email <span>required</span></label>
+        <input type="email" class="form-input" id="reg-email-confirm" placeholder="Confirm your email">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Create a password <span>required</span></label>
+        <input type="password" class="form-input" id="reg-password" placeholder="At least 8 characters" autocomplete="new-password">
+      </div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:1.5rem;line-height:1.6;">
+        By continuing, you agree to our <a href="#" style="color:var(--navy);">Terms of Service</a> and <a href="#" style="color:var(--navy);">Privacy Policy</a>.
+      </div>
+
+      <div style="display:flex;gap:12px;">
+        <button class="btn-lesson outline" onclick="goToStep(1)">← Back</button>
+        <button class="btn-primary" onclick="goToStep(3)" style="flex:1;">Continue to Payment</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Payment -->
+    <div class="enroll-step" id="enroll-step-3">
+      <h2 class="enroll-title">Secure Checkout</h2>
+      <p class="enroll-desc">Review your order and complete payment. All transactions are encrypted and secure.</p>
+
+      <div class="order-summary">
+        <div class="order-row">
+          <span id="order-course-name">—</span>
+          <span id="order-course-price">—</span>
+        </div>
+        <div class="order-row">
+          <span>Certificate of completion (PDF)</span>
+          <span>Included</span>
+        </div>
+        <div class="order-row">
+          <span>90-day access</span>
+          <span>Included</span>
+        </div>
+        <div class="order-row total">
+          <span>Total</span>
+          <span class="order-total-price" id="order-total">—</span>
+        </div>
+      </div>
+
+      <div class="payment-mock">
+        <p><strong>Payment processed securely via Stripe</strong></p>
+        <p style="font-size:12px;margin-top:4px;">In production: Stripe payment form appears here.<br>Integrate using Stripe.js + your Stripe publishable key.</p>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+          <div style="background:#635bff;color:#fff;padding:4px 10px;border-radius:3px;font-size:11px;font-weight:700;">stripe</div>
+          <div style="background:#eee;color:#555;padding:4px 10px;border-radius:3px;font-size:11px;">VISA</div>
+          <div style="background:#eee;color:#555;padding:4px 10px;border-radius:3px;font-size:11px;">MC</div>
+          <div style="background:#eee;color:#555;padding:4px 10px;border-radius:3px;font-size:11px;">AMEX</div>
+          <div style="background:#eee;color:#555;padding:4px 10px;border-radius:3px;font-size:11px;">PayPal</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;">
+        <button class="btn-lesson outline" onclick="goToStep(2)">← Back</button>
+        <button class="btn-primary" onclick="completeEnrollment()" style="flex:1;">Complete Enrollment →</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Confirmation / Course Start -->
+    <div class="enroll-step" id="enroll-step-4">
+      <div style="text-align:center;padding:1rem 0 2rem;">
+        <div class="cert-success-icon" style="margin-bottom:1rem;">✓</div>
+        <h2 class="enroll-title">Enrollment Confirmed!</h2>
+        <p class="enroll-desc">A receipt has been sent to <strong id="confirm-email">your email</strong>. You can begin your course immediately below.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem;">
+        <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:1rem;">Your enrollment</div>
+        <div style="font-size:13.5px;color:var(--text-muted);">
+          <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);">
+            <span>Course</span><strong id="conf-course" style="color:var(--navy);">—</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);">
+            <span>Student</span><strong id="conf-name" style="color:var(--navy);">—</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:5px 0;">
+            <span>Access expires</span><strong id="conf-expiry" style="color:var(--navy);">—</strong>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="startCourse()" style="width:100%;font-size:16px;padding:16px;">Begin Course Now →</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ COURSE PLAYER ═══════════════════════════════════ -->
+<div id="page-player" class="page">
+  <div class="player-layout">
+    <aside class="player-sidebar" aria-label="Course navigation">
+      <div class="sidebar-title" id="sidebar-course-title">Theft Awareness Class</div>
+      <div id="sidebar-modules"></div>
+    </aside>
+    <main class="player-main">
+      <div class="player-progress-bar" role="progressbar" aria-label="Course progress">
+        <div class="player-progress-fill" id="course-progress-fill" style="width:0%"></div>
+      </div>
+      <div id="lesson-content-wrapper"></div>
+      <div class="lesson-nav" id="lesson-nav">
+        <button class="btn-lesson outline" id="btn-prev" onclick="prevLesson()">← Previous</button>
+        <span style="font-size:13px;color:var(--text-muted);" id="lesson-counter"></span>
+        <button class="btn-lesson" id="btn-next" onclick="nextLesson()">Next →</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ CERTIFICATE PAGE ═══════════════════════════════════ -->
+<div id="page-certificate" class="page">
+  <div class="cert-page-wrap">
+    <div class="cert-success-icon">🏅</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--navy);margin-bottom:0.5rem;">Congratulations!</h2>
+    <p style="color:var(--text-muted);font-size:15px;margin-bottom:2rem;">You have successfully completed the Theft Awareness Class. Your official certificate is ready below.</p>
+
+    <div class="cert-print-area" id="certificate-display">
+      <div class="cert-border-inner">
+        <div class="cert-top-label">This is to certify that</div>
+        <div class="cert-main-title">Certificate of Completion</div>
+        <div class="cert-tagline">Theft Awareness Class · State-Recognized Education Program</div>
+        <div class="cert-presented">is proudly presented to</div>
+        <div class="cert-recipient" id="cert-student-name">Student Name</div>
+        <div class="cert-body-text">
+          who has successfully completed all required coursework and demonstrated<br>
+          understanding of the objectives of the<br>
+          <span class="cert-course-name" id="cert-course-display">Theft Awareness Class — 4-Hour Standard Program</span>
+        </div>
+        <div class="cert-details-row">
+          <div class="cert-detail">
+            <div class="cert-detail-val" id="cert-hours">4 Hours</div>
+            <div class="cert-detail-key">Credit Hours</div>
+          </div>
+          <div class="cert-detail">
+            <div class="cert-detail-val" id="cert-date">—</div>
+            <div class="cert-detail-key">Date of Completion</div>
+          </div>
+          <div class="cert-detail">
+            <div class="cert-detail-val" id="cert-id">TAC-000000</div>
+            <div class="cert-detail-key">Program ID</div>
+          </div>
+        </div>
+        <div class="cert-footer-row">
+          <div class="cert-sig-block">
+            <div class="cert-sig-name">Program Director</div>
+            <div class="cert-sig-title">Authorized Signature</div>
+          </div>
+          <div class="cert-seal-large">
+            <div style="font-size:11px;font-weight:900;color:var(--navy);">✦</div>
+            <div>OFFICIAL</div>
+            <div>SEAL</div>
+          </div>
+          <div class="cert-sig-block">
+            <div class="cert-sig-name">Theft Awareness Class</div>
+            <div class="cert-sig-title">Issuing Organization</div>
+          </div>
+        </div>
+      </div>
+      <div class="cert-id" id="cert-verify-id">Verification ID: TAC-000000 · theftawarenessclass.com</div>
+    </div>
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn-primary" onclick="downloadCertificate()">⬇ Download PDF Certificate</button>
+      <button class="btn-secondary" style="color:var(--navy);border-color:var(--navy);" onclick="window.print()">🖨 Print Certificate</button>
+    </div>
+
+    <div style="margin-top:2rem;background:var(--gold-pale);border:1px solid rgba(212,160,23,0.3);border-radius:8px;padding:1.25rem;font-size:13.5px;color:#5a4000;line-height:1.7;">
+      <strong style="display:block;margin-bottom:4px;">Submitting your certificate</strong>
+      Present this PDF to your probation officer, attorney, or the court as directed in your court order. This document includes a unique Program ID for verification purposes. Save a copy for your records.
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Theft Awareness Class</h3>
+      <p>A state-recognized online education program for court-ordered theft awareness requirements. Affordable, accessible, and designed to be completed on your schedule.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('course')">The Course</a>
+      <a onclick="showPage('enroll')">Enroll Now</a>
+      <a onclick="showPage('faq')">FAQs</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a>support@theftawarenessclass.com</a>
+      <a>Mon–Fri, 9 AM–5 PM ET</a>
+      <a onclick="showPage('faq')">Privacy Policy</a>
+      <a onclick="showPage('faq')">Terms of Service</a>
+      <a onclick="showPage('faq')">Refund Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>This program is designed for educational purposes to fulfill court-ordered requirements. Completion of this course does not guarantee any specific legal outcome. Always consult your attorney or probation officer regarding your specific court requirements. We are not affiliated with any court, law enforcement agency, or government body.</p>
+    <div class="footer-copy">© 2026 Theft Awareness Class. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ─── STATE ───────────────────────────────────────
+const state = {
+  selectedCourse: null,
+  studentName: '',
+  studentEmail: '',
+  currentLesson: 0,
+  completedLessons: new Set(),
+  quizAnswered: {}
+};
+
+// ─── CURRICULUM DATA ──────────────────────────────
+const curriculum4 = [
+  {
+    module: 'Module 1',
+    title: 'The True Cost of Retail Theft',
+    content: `
+      <h3>Beyond the price tag</h3>
+      <p>When most people think about retail theft, they picture a store losing a product. But the true cost extends far beyond any single item taken from a shelf. Retail theft is estimated to cost the U.S. economy over $100 billion annually — a figure that touches every person who shops, works, or lives in a community.</p>
+      <div class="stat-callout"><div class="stat-num">$100B+</div><div class="stat-text">Estimated annual cost of retail theft to the U.S. economy. This figure includes lost merchandise, security investments, and economic ripple effects.</div></div>
+      <h3>Who actually pays?</h3>
+      <p>Retailers respond to theft losses in predictable ways: raising prices, reducing staff, closing stores in high-theft areas, and investing in expensive security systems. Every customer who shops at a store affected by theft pays slightly more for every item — whether they realize it or not.</p>
+      <blockquote>Studies estimate that theft-related losses add approximately $400–$500 per year to the average household's shopping costs.</blockquote>
+      <h3>Small businesses bear the heaviest burden</h3>
+      <p>Large retail chains have loss prevention departments, insurance policies, and enough revenue to absorb some level of shrinkage. Small, independently-owned businesses do not. A single significant theft event can threaten the viability of a small business that operates on thin margins. When small businesses close, the effects on a neighborhood — job losses, reduced tax revenue, vacant storefronts — can last for years.</p>
+      <ul>
+        <li>Small businesses lose an average of 1.4% of revenue to theft annually</li>
+        <li>For a business doing $500,000 in sales, that's $7,000 lost — potentially a part-time employee's salary</li>
+        <li>Many small business owners cannot obtain affordable theft insurance</li>
+      </ul>
+      <h3>The employee impact</h3>
+      <p>Retail employees are directly affected by theft in ways that are often overlooked. Some employers implement policies that hold staff financially responsible for shrinkage. Workers face increased stress from confrontational theft incidents. Security personnel face real physical danger. And when theft drives a business to cut costs or close, employees lose their livelihoods.</p>
+    `,
+    quiz: {
+      question: 'When a retailer raises prices to compensate for theft losses, who ultimately pays?',
+      options: ['Only shoplifters', 'The insurance company', 'All customers who shop there', 'Only the store owner'],
+      correct: 2,
+      explanation: 'Correct. All customers absorb higher prices when retailers compensate for theft losses — meaning theft harms innocent shoppers as well.'
+    }
+  },
+  {
+    module: 'Module 2',
+    title: 'Legal Consequences & the Justice System',
+    content: `
+      <h3>Understanding theft charges</h3>
+      <p>Theft offenses are taken seriously by the justice system, and the consequences extend well beyond any fine or probation period. The severity of charges typically depends on the value of merchandise taken, prior criminal history, and whether force or deception was involved.</p>
+      <div class="stat-callout"><div class="stat-num">$500–$1,000</div><div class="stat-text">The typical threshold between misdemeanor and felony theft charges in most U.S. states — though this varies by jurisdiction.</div></div>
+      <h3>Misdemeanor vs. felony charges</h3>
+      <p>Petty theft — generally involving smaller amounts — is typically charged as a misdemeanor. While a misdemeanor is less severe than a felony, it still creates a criminal record that shows up on background checks. Grand theft, involving larger values or repeat offenses, can be charged as a felony — carrying potential prison sentences and dramatically more severe long-term consequences.</p>
+      <h3>The long reach of a criminal record</h3>
+      <ul>
+        <li><strong>Employment:</strong> Most employers conduct background checks. A theft conviction on your record makes it significantly harder to be hired, particularly in retail, finance, healthcare, and government positions.</li>
+        <li><strong>Housing:</strong> Many landlords screen for criminal records. A theft conviction can make it difficult to rent an apartment, even years after the offense.</li>
+        <li><strong>Professional licensing:</strong> Many professional licenses — nursing, teaching, law, real estate — can be denied or revoked based on theft convictions.</li>
+        <li><strong>Federal benefits:</strong> Certain federal student aid, housing assistance, and other benefits can be affected by a criminal record.</li>
+      </ul>
+      <h3>Civil recovery</h3>
+      <p>In addition to criminal penalties, most states allow retailers to pursue civil recovery from individuals caught shoplifting — regardless of whether criminal charges are filed. Civil recovery demands are typically sent by the retailer's attorney and can range from a few hundred to several thousand dollars. Ignoring these demands can result in civil lawsuits and judgments against you.</p>
+      <blockquote>A single shoplifting incident can result in criminal charges, a civil recovery demand, and a permanent criminal record — all from one decision.</blockquote>
+    `,
+    quiz: {
+      question: 'Which of the following is NOT typically a consequence of a theft conviction?',
+      options: ['Difficulty finding employment', 'Automatic expungement after 1 year', 'Difficulty renting housing', 'Loss of professional licenses'],
+      correct: 1,
+      explanation: 'Correct. Theft convictions do not automatically expire or get expunged. Expungement requires a legal process and is not automatic or guaranteed.'
+    }
+  },
+  {
+    module: 'Module 3',
+    title: 'Understanding the Decision to Steal',
+    content: `
+      <h3>Why do people steal?</h3>
+      <p>Theft is rarely a random act. Research in criminology and psychology identifies several recurring factors that contribute to theft behavior. Understanding these factors is not about making excuses — it is about building genuine self-awareness so that better decisions can be made in the future.</p>
+      <h3>Common contributing factors</h3>
+      <ul>
+        <li><strong>Rationalization:</strong> "The store can afford it." "Prices are too high anyway." "Everyone does it." These thought patterns allow a person to justify theft to themselves, reducing the psychological barrier to acting.</li>
+        <li><strong>Opportunity:</strong> Situational factors — a busy store, poor security, a moment of perceived safety — can lower inhibitions. Many thefts are impulsive responses to perceived opportunity rather than premeditated plans.</li>
+        <li><strong>Peer influence:</strong> Particularly among younger individuals, social pressure and the desire for approval can contribute significantly to theft behavior.</li>
+        <li><strong>Financial stress:</strong> While not a legal defense, genuine economic hardship can be a contributing factor in some theft incidents.</li>
+        <li><strong>Thrill-seeking:</strong> Some individuals steal primarily for the rush of adrenaline, not because of need.</li>
+      </ul>
+      <div class="stat-callout"><div class="stat-num">~70%</div><div class="stat-text">Of shoplifting incidents are described as impulsive or opportunistic rather than carefully planned — suggesting that awareness and pause can interrupt the cycle.</div></div>
+      <h3>The role of rationalization</h3>
+      <p>One of the most important concepts in understanding theft behavior is rationalization — the mental process of convincing oneself that a harmful action is acceptable. Recognizing your own rationalizations in the moment they occur is a critical skill for changing behavior.</p>
+      <blockquote>The moment between impulse and action is where choices are actually made. Expanding that moment — creating space to think — is a learnable skill.</blockquote>
+      <h3>Breaking the pattern</h3>
+      <p>Understanding the triggers and rationalizations that lead to theft is the first step toward changing behavior. This involves developing personal accountability, building a support network, and — when underlying issues like financial hardship or addiction are present — seeking appropriate resources.</p>
+    `,
+    quiz: {
+      question: 'What does "rationalization" mean in the context of theft behavior?',
+      options: [
+        'Carefully planning a theft in advance',
+        'Convincing yourself that a harmful action is acceptable',
+        'Reporting theft to store management',
+        'Calculating the exact cost of items taken'
+      ],
+      correct: 1,
+      explanation: 'Correct. Rationalization is the process of justifying an action to yourself — telling yourself "they can afford it" or "prices are too high" are examples of rationalizations that lower the psychological barrier to theft.'
+    }
+  },
+  {
+    module: 'Module 4',
+    title: 'Moving Forward: Positive Change',
+    content: `
+      <h3>This is not the end of your story</h3>
+      <p>Completing this course is a step toward accountability and forward movement. A theft offense does not have to define who you are or determine your future. People make mistakes, recognize the harm they've caused, and change — every day. This module focuses on practical strategies for doing exactly that.</p>
+      <h3>Taking genuine accountability</h3>
+      <p>Accountability is more than fulfilling a legal requirement. It means honestly acknowledging the harm your actions caused — to the business, to employees, and to your community — and making a personal commitment to act differently. This internal shift is more powerful and lasting than any external consequence.</p>
+      <h3>Practical strategies for change</h3>
+      <ul>
+        <li><strong>Identify your triggers.</strong> Based on what you learned in Module 3, what specific situations, emotions, or pressures contributed to your offense? Awareness is the foundation of change.</li>
+        <li><strong>Create distance from opportunity.</strong> If certain environments create temptation, deliberately avoiding those environments is a valid and practical strategy.</li>
+        <li><strong>Build your support network.</strong> Talk to trusted people in your life. Isolation makes change harder. Community — friends, family, mentors — makes it more achievable.</li>
+        <li><strong>Access available resources.</strong> If financial hardship, substance use, or mental health challenges contributed to your offense, connecting with appropriate resources is not weakness — it is wisdom.</li>
+      </ul>
+      <div class="stat-callout"><div class="stat-num">Research</div><div class="stat-text">Consistently shows that people who engage genuinely with educational programs — not just as a box to check — have substantially better outcomes in the years following a first offense.</div></div>
+      <blockquote>The most important question is not "what happened?" — it is "what happens next?"</blockquote>
+      <h3>Completing your court requirements</h3>
+      <p>By completing this course, you are fulfilling an important part of your court obligations. Present your certificate to your probation officer or attorney as directed. Keep a copy for your records. This is a meaningful step — take it seriously, and let it be the beginning of a different direction.</p>
+    `,
+    quiz: {
+      question: 'Which of the following is the most important outcome of this course?',
+      options: [
+        'Memorizing statistics about retail theft',
+        'Fulfilling a legal requirement with no personal reflection',
+        'Genuine self-awareness and a commitment to different choices',
+        'Proving to the court that you attended a class'
+      ],
+      correct: 2,
+      explanation: 'Correct. The most lasting benefit of this program is genuine self-awareness and a personal commitment to change — not simply fulfilling a requirement.'
+    }
+  }
+];
+
+const extraModules = [
+  {
+    module: 'Module 5',
+    title: 'Retail Theft & Organized Crime',
+    content: `
+      <h3>Beyond the individual act</h3>
+      <p>While many theft incidents are individual and opportunistic, retail theft also connects to broader criminal networks in ways that have serious public safety implications. Understanding this connection provides important context for the full scope of the problem.</p>
+      <h3>Organized retail crime (ORC)</h3>
+      <p>Organized retail crime refers to coordinated theft operations carried out by groups rather than individuals. Unlike opportunistic shoplifting, ORC involves planning, division of roles, and often the resale of stolen goods through secondary markets — including online platforms.</p>
+      <div class="stat-callout"><div class="stat-num">$30B+</div><div class="stat-text">Estimated annual losses attributable to organized retail crime in the U.S. — nearly a third of all retail theft losses.</div></div>
+      <h3>The broader criminal ecosystem</h3>
+      <p>Organized theft operations are frequently connected to other criminal activity, including money laundering, drug distribution networks, and human trafficking. Individuals who participate in ORC — even in minor roles — may find themselves entangled in serious federal criminal investigations with consequences far beyond what they anticipated.</p>
+      <blockquote>What begins as "helping someone grab some stuff" can quickly become participation in a federal criminal conspiracy.</blockquote>
+    `,
+    quiz: {
+      question: 'What distinguishes organized retail crime from individual shoplifting?',
+      options: [
+        'It involves larger store chains only',
+        'It is coordinated, involves multiple people, and often connects to broader criminal networks',
+        'It is always prosecuted federally',
+        'It only involves high-value luxury goods'
+      ],
+      correct: 1,
+      explanation: 'Correct. Organized retail crime is distinguished by its coordinated, multi-person nature and frequent connection to broader criminal enterprises.'
+    }
+  },
+  {
+    module: 'Module 6',
+    title: 'Victims of Theft: Human Impact',
+    content: `
+      <h3>The people behind the numbers</h3>
+      <p>Data and statistics about retail theft can feel abstract. This module focuses on the human reality — the employees, owners, and community members whose lives are directly affected by theft.</p>
+      <h3>Store employees</h3>
+      <p>Retail workers are on the front lines of theft incidents. They face real physical danger when confronting theft situations — a danger that has increased significantly as retail theft incidents have become more brazen. Many retail workers experience significant stress and anxiety related to theft incidents at their workplace. Some are held to production or shrinkage standards that affect their pay or employment status based on theft losses they cannot control.</p>
+      <div class="stat-callout"><div class="stat-num">40%</div><div class="stat-text">Of retail workers surveyed report that theft-related incidents have negatively affected their sense of safety and well-being at work.</div></div>
+      <h3>Small business owners</h3>
+      <p>For a small business owner, theft is deeply personal. Their business may represent decades of work, personal savings, and their family's livelihood. Many small business owners describe the experience of being robbed not just as a financial loss but as a violation — a harm to something they have poured themselves into building.</p>
+      <blockquote>"When someone takes from my store, they're taking from my family. This is how I send my kids to school." — Small business owner</blockquote>
+    `,
+    quiz: {
+      question: 'Which group is directly placed at physical risk by theft incidents in retail settings?',
+      options: ['Corporate executives', 'Retail employees on the floor', 'Online shoppers', 'Wholesale suppliers'],
+      correct: 1,
+      explanation: 'Correct. Retail employees are directly at risk during theft incidents, and increasing brazenness in retail theft has made this a growing concern for worker safety.'
+    }
+  },
+  {
+    module: 'Module 7',
+    title: 'Economic & Societal Ripple Effects',
+    content: `
+      <h3>How theft reshapes communities</h3>
+      <p>The economic effects of retail theft extend well beyond individual stores into the fabric of entire communities — with some of the most severe consequences falling on neighborhoods that can least afford them.</p>
+      <h3>Store closures and retail deserts</h3>
+      <p>When theft losses make a store unprofitable, businesses close. This is not hypothetical — major retailers have explicitly cited theft as a primary reason for closing stores in specific locations. When stores close, the resulting "retail deserts" mean that community members — often in lower-income urban areas — must travel much farther to access grocery stores, pharmacies, and other essentials.</p>
+      <div class="stat-callout"><div class="stat-num">30%+</div><div class="stat-text">Of major retailers that have announced store closures in recent years have cited theft and shrinkage as a contributing factor.</div></div>
+      <h3>Tax revenue and public services</h3>
+      <p>Retail businesses pay sales taxes, property taxes, and business taxes that fund local public services — schools, libraries, parks, road maintenance. When theft contributes to business closures, local tax revenue declines and public services are affected. This is a harm that falls on every resident of a community.</p>
+      <blockquote>The communities most harmed by the closure of local retailers are often those with the fewest alternatives and the least political power to respond.</blockquote>
+    `,
+    quiz: {
+      question: 'When theft causes retailers to close stores in a neighborhood, which community members are typically most harmed?',
+      options: [
+        'Wealthy residents who can shop elsewhere easily',
+        'Online retailers who gain market share',
+        'Lower-income residents in urban areas who have fewer alternatives',
+        'Municipal governments who receive federal replacement funding'
+      ],
+      correct: 2,
+      explanation: 'Correct. Lower-income urban residents are most severely affected by retail closures, as they have fewer transportation options and fewer alternative shopping locations.'
+    }
+  },
+  {
+    module: 'Module 8',
+    title: 'Restorative Justice & Accountability',
+    content: `
+      <h3>A different way of thinking about justice</h3>
+      <p>Traditional criminal justice focuses primarily on punishment — consequences for the person who caused harm. Restorative justice is a complementary approach that focuses instead on repairing harm, restoring relationships, and reintegrating individuals into their communities in a constructive way.</p>
+      <h3>Core principles of restorative justice</h3>
+      <ul>
+        <li><strong>Acknowledging harm:</strong> Genuine accountability begins with honestly recognizing the harm caused to specific people and the community.</li>
+        <li><strong>Repairing damage:</strong> Where possible, restorative justice seeks concrete ways to repair the harm caused — whether through restitution, community service, or direct dialogue with those affected.</li>
+        <li><strong>Reintegration:</strong> The goal is not to permanently stigmatize the person who caused harm, but to support their return to the community as a constructive member.</li>
+      </ul>
+      <div class="stat-callout"><div class="stat-num">Lower</div><div class="stat-text">Research consistently shows that participants in restorative justice programs have lower recidivism rates than those who go through traditional punitive processes alone.</div></div>
+      <h3>Your accountability as a starting point</h3>
+      <p>Completing this course is an act of accountability. It is the beginning of a restorative process — not the end. The knowledge and self-awareness you've developed over these eight modules are tools. What matters most is how you choose to use them going forward.</p>
+      <blockquote>Accountability is not about shame. It is about the courage to look honestly at your actions, understand their effects, and commit to something different.</blockquote>
+      <p>You have completed all the coursework for this program. You are ready to take your final assessment and receive your Certificate of Completion.</p>
+    `,
+    quiz: {
+      question: 'What is the primary focus of restorative justice?',
+      options: [
+        'Maximizing prison sentences',
+        'Repairing harm, restoring relationships, and reintegration',
+        'Eliminating all criminal records',
+        'Removing accountability from the individual'
+      ],
+      correct: 1,
+      explanation: 'Correct. Restorative justice focuses on repairing harm, restoring relationships, and supporting the individual\'s reintegration into the community — rather than punishment alone.'
+    }
+  }
+];
+
+// ─── NAVIGATION ──────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-links a[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === id);
+  });
+  window.scrollTo(0, 0);
+  document.getElementById('main-nav').classList.remove('open');
+  if (id === 'enroll') updateOrderSummary();
+}
+
+function toggleNav() {
+  document.getElementById('main-nav').classList.toggle('open');
+}
+
+// ─── ENROLLMENT FLOW ─────────────────────────────
+function enrollWithCourse(hours) {
+  showPage('enroll');
+  selectCourse(hours);
+}
+
+function selectCourse(hours) {
+  state.selectedCourse = hours;
+  document.querySelectorAll('.course-select-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('select-' + hours).classList.add('selected');
+  const btn = document.getElementById('step1-next');
+  btn.disabled = false;
+  btn.style.opacity = '1';
+  btn.style.cursor = 'pointer';
+}
+
+function goToStep(n) {
+  if (n === 3) {
+    const first = document.getElementById('reg-first').value.trim();
+    const last = document.getElementById('reg-last').value.trim();
+    const email = document.getElementById('reg-email').value.trim();
+    const emailC = document.getElementById('reg-email-confirm').value.trim();
+    const pass = document.getElementById('reg-password').value;
+    if (!first || !last) { showToast('Please enter your first and last name.'); return; }
+    if (!email || !email.includes('@')) { showToast('Please enter a valid email address.'); return; }
+    if (email !== emailC) { showToast('Email addresses do not match.'); return; }
+    if (pass.length < 8) { showToast('Password must be at least 8 characters.'); return; }
+    state.studentName = first + ' ' + last;
+    state.studentEmail = email;
+    updateOrderSummary();
+  }
+  document.querySelectorAll('.enroll-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('enroll-step-' + n).classList.add('active');
+  updateProgress(n);
+}
+
+function updateProgress(step) {
+  for (let i = 1; i <= 4; i++) {
+    const dot = document.getElementById('dot-' + i);
+    const label = document.getElementById('label-' + i);
+    dot.className = 'progress-dot';
+    label.className = 'progress-label';
+    if (i < step) { dot.classList.add('done'); dot.innerHTML = '✓'; }
+    else if (i === step) { dot.classList.add('active'); dot.innerHTML = i; label.classList.add('active'); }
+    else { dot.innerHTML = i; }
+  }
+  for (let i = 1; i <= 3; i++) {
+    const line = document.getElementById('line-' + i);
+    line.className = 'progress-line' + (i < step ? ' done' : '');
+  }
+}
+
+function updateOrderSummary() {
+  if (!state.selectedCourse) return;
+  const price = state.selectedCourse === 4 ? '$10' : '$20';
+  const name = state.selectedCourse === 4 ? '4-Hour Standard Program' : '8-Hour Extended Program';
+  const el1 = document.getElementById('order-course-name');
+  const el2 = document.getElementById('order-course-price');
+  const el3 = document.getElementById('order-total');
+  if (el1) el1.textContent = name;
+  if (el2) el2.textContent = price;
+  if (el3) el3.textContent = price;
+}
+
+function completeEnrollment() {
+  const expiry = new Date();
+  expiry.setDate(expiry.getDate() + 90);
+  document.getElementById('confirm-email').textContent = state.studentEmail || 'your email';
+  document.getElementById('conf-course').textContent = state.selectedCourse + '-Hour ' + (state.selectedCourse === 4 ? 'Standard' : 'Extended') + ' Program';
+  document.getElementById('conf-name').textContent = state.studentName || 'Student';
+  document.getElementById('conf-expiry').textContent = expiry.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  goToStep(4);
+}
+
+// ─── COURSE PLAYER ───────────────────────────────
+function startCourse() {
+  const lessons = state.selectedCourse === 8
+    ? [...curriculum4, ...extraModules]
+    : [...curriculum4];
+
+  state.lessons = lessons;
+  state.currentLesson = 0;
+  state.completedLessons = new Set();
+  state.quizAnswered = {};
+
+  buildSidebar();
+  renderLesson(0);
+  showPage('player');
+}
+
+function buildSidebar() {
+  const container = document.getElementById('sidebar-modules');
+  const title = document.getElementById('sidebar-course-title');
+  title.textContent = state.selectedCourse + '-Hour Theft Awareness Class';
+  container.innerHTML = '';
+
+  let currentMod = '';
+  let modDiv = null;
+
+  state.lessons.forEach((lesson, idx) => {
+    if (lesson.module !== currentMod) {
+      currentMod = lesson.module;
+      modDiv = document.createElement('div');
+      modDiv.className = 'sidebar-module';
+      const modTitle = document.createElement('div');
+      modTitle.className = 'sidebar-module-title';
+      modTitle.textContent = lesson.module;
+      modDiv.appendChild(modTitle);
+      container.appendChild(modDiv);
+    }
+
+    const item = document.createElement('div');
+    item.className = 'sidebar-lesson' + (idx === 0 ? ' active' : '');
+    item.id = 'sidebar-lesson-' + idx;
+    item.onclick = () => renderLesson(idx);
+    item.innerHTML = `<div class="lesson-check">${state.completedLessons.has(idx) ? '✓' : ''}</div><span>${lesson.title}</span>`;
+    modDiv.appendChild(item);
+  });
+}
+
+function renderLesson(idx) {
+  state.currentLesson = idx;
+  const lesson = state.lessons[idx];
+  const total = state.lessons.length;
+
+  document.querySelectorAll('.sidebar-lesson').forEach((el, i) => {
+    el.classList.remove('active');
+    el.className = 'sidebar-lesson' + (state.completedLessons.has(i) ? ' done' : '') + (i === idx ? ' active' : '');
+    el.querySelector('.lesson-check').textContent = state.completedLessons.has(i) ? '✓' : '';
+  });
+
+  const progress = state.completedLessons.size / total * 100;
+  document.getElementById('course-progress-fill').style.width = progress + '%';
+
+  const alreadyAnswered = state.quizAnswered[idx];
+
+  document.getElementById('lesson-content-wrapper').innerHTML = `
+    <div class="lesson-content-area">
+      <div class="lesson-module-label">${lesson.module} of ${total}</div>
+      <h2 class="lesson-title">${lesson.title}</h2>
+      <div class="lesson-body">${lesson.content}</div>
+    </div>
+    <div class="quiz-area" id="quiz-${idx}">
+      <div class="quiz-title">Knowledge Check</div>
+      <div class="quiz-question">${lesson.quiz.question}</div>
+      <ul class="quiz-options" id="quiz-opts-${idx}">
+        ${lesson.quiz.options.map((opt, oi) => `
+          <li class="quiz-option ${alreadyAnswered !== undefined ? (oi === lesson.quiz.correct ? 'correct' : (oi === alreadyAnswered ? 'wrong' : '')) : ''}"
+              id="opt-${idx}-${oi}"
+              onclick="${alreadyAnswered === undefined ? `answerQuiz(${idx}, ${oi})` : ''}">
+            <span>${String.fromCharCode(65+oi)}.</span> ${opt}
+          </li>`).join('')}
+      </ul>
+      <div class="quiz-feedback ${alreadyAnswered !== undefined ? (alreadyAnswered === lesson.quiz.correct ? 'correct' : 'wrong') : ''}" id="quiz-feedback-${idx}">
+        ${alreadyAnswered !== undefined ? (alreadyAnswered === lesson.quiz.correct ? '✓ ' : '✗ ') + lesson.quiz.explanation : ''}
+      </div>
+      ${alreadyAnswered !== undefined ? `<button class="btn-lesson gold" onclick="${idx === total - 1 ? 'completeCourse()' : `renderLesson(${idx + 1})`}">${idx === total - 1 ? '🏅 Get Your Certificate' : 'Continue to Next Lesson →'}</button>` : ''}
+    </div>
+  `;
+
+  document.getElementById('lesson-counter').textContent = `Lesson ${idx + 1} of ${total}`;
+  document.getElementById('btn-prev').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  document.getElementById('btn-next').style.display = idx === total - 1 ? 'none' : 'inline-block';
+
+  window.scrollTo(0, 0);
+}
+
+function answerQuiz(lessonIdx, chosenIdx) {
+  const lesson = state.lessons[lessonIdx];
+  const correct = lesson.quiz.correct;
+  state.quizAnswered[lessonIdx] = chosenIdx;
+
+  document.querySelectorAll(`#quiz-opts-${lessonIdx} .quiz-option`).forEach((el, oi) => {
+    el.onclick = null;
+    if (oi === correct) el.classList.add('correct');
+    else if (oi === chosenIdx) el.classList.add('wrong');
+  });
+
+  const feedback = document.getElementById(`quiz-feedback-${lessonIdx}`);
+  const isCorrect = chosenIdx === correct;
+  feedback.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'wrong');
+  feedback.textContent = (isCorrect ? '✓ ' : '✗ ') + lesson.quiz.explanation;
+
+  if (isCorrect) state.completedLessons.add(lessonIdx);
+
+  const total = state.lessons.length;
+  const quizArea = document.getElementById(`quiz-${lessonIdx}`);
+  const continueBtn = document.createElement('button');
+  continueBtn.className = 'btn-lesson gold';
+  continueBtn.style.marginTop = '12px';
+
+  if (lessonIdx === total - 1 && state.completedLessons.size === total) {
+    continueBtn.textContent = '🏅 Get Your Certificate';
+    continueBtn.onclick = completeCourse;
+  } else if (lessonIdx === total - 1) {
+    continueBtn.textContent = '↩ Review incomplete lessons';
+    continueBtn.onclick = () => renderLesson(0);
+  } else {
+    continueBtn.textContent = 'Continue to Next Lesson →';
+    continueBtn.onclick = () => renderLesson(lessonIdx + 1);
+  }
+
+  quizArea.appendChild(continueBtn);
+  const progress = state.completedLessons.size / total * 100;
+  document.getElementById('course-progress-fill').style.width = progress + '%';
+
+  buildSidebar();
+}
+
+function prevLesson() {
+  if (state.currentLesson > 0) renderLesson(state.currentLesson - 1);
+}
+
+function nextLesson() {
+  if (state.currentLesson < state.lessons.length - 1) renderLesson(state.currentLesson + 1);
+}
+
+function completeCourse() {
+  const hours = state.selectedCourse;
+  const courseName = hours === 4
+    ? 'Theft Awareness Class — 4-Hour Standard Program'
+    : 'Theft Awareness Class — 8-Hour Extended Program';
+
+  const today = new Date();
+  const dateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const certId = 'TAC-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+
+  document.getElementById('cert-student-name').textContent = state.studentName || 'Student Name';
+  document.getElementById('cert-course-display').textContent = courseName;
+  document.getElementById('cert-hours').textContent = hours + ' Hours';
+  document.getElementById('cert-date').textContent = dateStr;
+  document.getElementById('cert-id').textContent = certId;
+  document.getElementById('cert-verify-id').textContent = 'Verification ID: ' + certId + ' · theftawarenessclass.com';
+
+  showPage('certificate');
+}
+
+// ─── PDF CERTIFICATE ─────────────────────────────
+function downloadCertificate() {
+  try {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ orientation: 'landscape', unit: 'in', format: [11, 8.5] });
+
+    const W = 11, H = 8.5;
+    const certId = document.getElementById('cert-id').textContent;
+    const studentName = state.studentName || 'Student Name';
+    const hours = state.selectedCourse || 4;
+    const courseName = hours === 4
+      ? 'Theft Awareness Class — 4-Hour Standard Program'
+      : 'Theft Awareness Class — 8-Hour Extended Program';
+    const today = new Date();
+    const dateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+    // Navy background strip top/bottom
+    doc.setFillColor(13, 31, 60);
+    doc.rect(0, 0, W, 0.6, 'F');
+    doc.rect(0, H - 0.6, W, 0.6, 'F');
+
+    // Gold accent line
+    doc.setFillColor(212, 160, 23);
+    doc.rect(0, 0.6, W, 0.05, 'F');
+    doc.rect(0, H - 0.65, W, 0.05, 'F');
+
+    // Outer border
+    doc.setDrawColor(212, 160, 23);
+    doc.setLineWidth(0.02);
+    doc.rect(0.35, 0.75, W - 0.7, H - 1.5);
+
+    // Inner border
+    doc.setDrawColor(212, 160, 23);
+    doc.setLineWidth(0.008);
+    doc.rect(0.45, 0.85, W - 0.9, H - 1.7);
+
+    // Corner flourishes
+    const corners = [[0.45, 0.85], [W - 0.45, 0.85], [0.45, H - 0.85], [W - 0.45, H - 0.85]];
+    doc.setFontSize(14);
+    doc.setTextColor(212, 160, 23);
+
+    // Title bar
+    doc.setFillColor(13, 31, 60);
+    doc.rect(2.5, 1.0, W - 5, 0.45, 'F');
+    doc.setTextColor(240, 192, 88);
+    doc.setFontSize(9);
+    doc.text('CERTIFICATE OF COMPLETION', W / 2, 1.3, { align: 'center' });
+
+    // Main heading
+    doc.setTextColor(13, 31, 60);
+    doc.setFontSize(28);
+    doc.text('Theft Awareness Class', W / 2, 2.1, { align: 'center' });
+
+    doc.setFontSize(10);
+    doc.setTextColor(100, 80, 0);
+    doc.text('A State-Recognized Education Program', W / 2, 2.4, { align: 'center' });
+
+    // Presented to
+    doc.setFontSize(11);
+    doc.setTextColor(90, 90, 90);
+    doc.text('This certifies that', W / 2, 2.9, { align: 'center' });
+
+    // Student name
+    doc.setFontSize(32);
+    doc.setTextColor(13, 31, 60);
+    doc.text(studentName, W / 2, 3.6, { align: 'center' });
+
+    // Name underline
+    const nameWidth = doc.getTextWidth(studentName);
+    doc.setDrawColor(13, 31, 60);
+    doc.setLineWidth(0.015);
+    doc.line(W / 2 - nameWidth / 2 - 0.2, 3.7, W / 2 + nameWidth / 2 + 0.2, 3.7);
+
+    // Body text
+    doc.setFontSize(10.5);
+    doc.setTextColor(80, 80, 80);
+    doc.text('has successfully completed all required coursework and demonstrated understanding of the', W / 2, 4.05, { align: 'center' });
+    doc.text('objectives of the', W / 2, 4.25, { align: 'center' });
+
+    doc.setFontSize(12);
+    doc.setTextColor(13, 31, 60);
+    doc.text(courseName, W / 2, 4.55, { align: 'center' });
+
+    // Details row
+    const detailY = 5.1;
+    doc.setFillColor(248, 245, 236);
+    doc.roundedRect(1.5, 4.8, W - 3, 0.65, 0.1, 0.1, 'F');
+
+    const details = [
+      { label: 'CREDIT HOURS', value: hours + ' Hours' },
+      { label: 'DATE OF COMPLETION', value: dateStr },
+      { label: 'PROGRAM ID', value: certId }
+    ];
+    details.forEach((d, i) => {
+      const x = 2.5 + i * 2.7;
+      doc.setFontSize(13);
+      doc.setTextColor(13, 31, 60);
+      doc.text(d.value, x, detailY, { align: 'center' });
+      doc.setFontSize(7);
+      doc.setTextColor(130, 100, 0);
+      doc.text(d.label, x, detailY + 0.22, { align: 'center' });
+    });
+
+    // Signature blocks
+    const sigY = 6.4;
+
+    // Left sig
+    doc.setDrawColor(150, 150, 150);
+    doc.setLineWidth(0.008);
+    doc.line(1.0, sigY + 0.3, 3.2, sigY + 0.3);
+    doc.setFontSize(13);
+    doc.setTextColor(13, 31, 60);
+    doc.setFont('helvetica', 'italic');
+    doc.text('Program Director', 2.1, sigY + 0.2, { align: 'center' });
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(7);
+    doc.setTextColor(130, 130, 130);
+    doc.text('AUTHORIZED SIGNATURE', 2.1, sigY + 0.48, { align: 'center' });
+
+    // Center seal
+    doc.setDrawColor(13, 31, 60);
+    doc.setLineWidth(0.02);
+    doc.circle(W / 2, sigY + 0.2, 0.42);
+    doc.setLineWidth(0.008);
+    doc.circle(W / 2, sigY + 0.2, 0.35);
+    doc.setFontSize(7);
+    doc.setTextColor(13, 31, 60);
+    doc.text('OFFICIAL', W / 2, sigY + 0.14, { align: 'center' });
+    doc.text('SEAL', W / 2, sigY + 0.28, { align: 'center' });
+
+    // Right sig
+    doc.setDrawColor(150, 150, 150);
+    doc.setLineWidth(0.008);
+    doc.line(7.8, sigY + 0.3, 10.0, sigY + 0.3);
+    doc.setFontSize(13);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(13, 31, 60);
+    doc.text('Theft Awareness Class', 8.9, sigY + 0.2, { align: 'center' });
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(7);
+    doc.setTextColor(130, 130, 130);
+    doc.text('ISSUING ORGANIZATION', 8.9, sigY + 0.48, { align: 'center' });
+
+    // Verification footer
+    doc.setFillColor(13, 31, 60);
+    doc.setTextColor(180, 160, 100);
+    doc.setFontSize(7.5);
+    doc.text('Verification ID: ' + certId + '  ·  theftawarenessclass.com', W / 2, H - 0.32, { align: 'center' });
+
+    const fname = 'TheftAwarenessClass_Certificate_' + studentName.replace(/\s+/g, '_') + '.pdf';
+    doc.save(fname);
+    showToast('Certificate downloaded!');
+  } catch (e) {
+    console.error(e);
+    showToast('PDF download requires an internet connection to load the PDF library.');
+    window.print();
+  }
+}
+
+// ─── FAQ ─────────────────────────────────────────
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q.open').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+}
+
+// ─── CONTACT ─────────────────────────────────────
+function submitContact() {
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const msg = document.getElementById('contact-msg').value.trim();
+  if (!name || !email || !msg) { showToast('Please fill in all required fields.'); return; }
+  showToast('Message sent! We\'ll respond within one business day.');
+  document.getElementById('contact-name').value = '';
+  document.getElementById('contact-email').value = '';
+  document.getElementById('contact-msg').value = '';
+}
+
+// ─── TOAST ───────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// ─── INIT ────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  showPage('home');
+});
+</script>
+
+</body>
+</html>
